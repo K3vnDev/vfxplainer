@@ -27,14 +27,14 @@ class Layout extends StatelessWidget {
             backgroundColor: const Color(0xFF0A0A0A),
             circle1: RadialGradient(
               colors: [
-                const Color.fromARGB(255, 53, 148, 96).withAlpha(75),
+                const Color.fromARGB(255, 135, 51, 214).withAlpha(75),
                 Colors.transparent,
               ],
               radius: radius,
             ),
             circle2: RadialGradient(
               colors: [
-                const Color.fromARGB(255, 81, 230, 192).withAlpha(55),
+                const Color.fromARGB(255, 63, 124, 255).withAlpha(55),
                 Colors.transparent,
               ],
               radius: radius,
