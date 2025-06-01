@@ -1,11 +1,11 @@
 name: vfxplainer
-description: "A new Flutter project."
+description: "An interactive visual effects explainer app built with Flutter."
 publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-    sdk: ">=3.4.3 <4.0.0"
+    sdk: ^3.6.1
 
 dependencies:
     flutter:
