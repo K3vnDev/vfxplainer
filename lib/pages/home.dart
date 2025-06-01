@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vfxplainer/utils/consts.dart';
 import 'package:vfxplainer/widgets/paragraph.dart';
 
@@ -26,29 +27,26 @@ class HomePage extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 48),
+          const SizedBox(height: 8),
           Paragraph(
             text: question,
             alpha: ParagraphAlpha.full,
             overrideStyle: const TextStyle(
-                color: Color.fromARGB(255, 211, 199, 253),
-                fontSize: 32,
-                height: 1.4,
-                fontWeight: FontWeight.w700),
+              color: Color.fromARGB(255, 200, 185, 253),
+              fontSize: 28,
+              height: 1.4,
+              fontWeight: FontWeight.w700,
+            ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 40),
+          Paragraph(
+            text: paragraph,
+          ),
           const Expanded(child: SizedBox()),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const _StartButton(),
-              const SizedBox(height: 24),
-              Paragraph(
-                text: paragraph,
-                size: ParagraphSize.md,
-                alignment: TextAlign.center,
-              ),
-            ],
+          Center(
+            child: _StartButton(
+              onTap: () => context.go("/learn"),
+            ),
           )
         ],
       ),
@@ -57,16 +55,17 @@ class HomePage extends StatelessWidget {
 }
 
 class _StartButton extends StatelessWidget {
-  const _StartButton();
+  // ignore: unused_element
+  const _StartButton({this.onTap});
 
   final double svgSize = 40;
 
-  void _handleTap() {}
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: _handleTap,
+      onPressed: onTap?.call,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white.withAlpha(15),
