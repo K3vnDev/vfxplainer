@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vfxplainer/widgets/fancy_background.dart';
+import 'package:vfxplainer/widgets/nav_bar.dart';
 
 class Layout extends StatelessWidget {
   const Layout({super.key, required this.child});
@@ -20,7 +21,7 @@ class Layout extends StatelessWidget {
     const double radius = 0.6;
 
     return Scaffold(
-      // bottomNavigationBar: NavBar(),
+      bottomNavigationBar: const NavBar(),
       body: Stack(
         children: [
           FancyBackground(
