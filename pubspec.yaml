@@ -1,29 +1,36 @@
 name: vfxplainer
-description: "An interactive visual effects explainer app built with Flutter."
-publish_to: "none"
+description: 'An interactive visual effects explainer app built with Flutter.'
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-    sdk: ^3.6.1
+  sdk: ^3.6.1
 
 dependencies:
-    flutter:
-        sdk: flutter
+  flutter:
+    sdk: flutter
 
-    cupertino_icons: ^1.0.6
-    go_router: ^15.1.2
-    flutter_svg: ^2.1.0
+  cupertino_icons: ^1.0.6
+  go_router: ^15.1.2
+  flutter_svg: ^2.1.0
+  flutter_launcher_icons: ^0.14.3
 
 dev_dependencies:
-    flutter_test:
-        sdk: flutter
+  flutter_test:
+    sdk: flutter
 
-    flutter_lints: ^3.0.0
+  flutter_lints: ^3.0.0
 
 flutter:
-    uses-material-design: true
+  uses-material-design: true
 
-    assets:
-        - assets/svgs/
-        - assets/images/
+  assets:
+    - assets/svgs/
+    - assets/images/
+    - assets/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: 'assets/app-icon.jpeg'
