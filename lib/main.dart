@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         GoRoute(
           path: "/quiz",
-          builder: (context, state) => const QuizPage(),
+          builder: (context, state) => QuizPage(),
         ),
       ],
     ),

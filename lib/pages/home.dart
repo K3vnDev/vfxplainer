@@ -7,10 +7,7 @@ import 'package:vfxplainer/widgets/paragraph.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  final question =
-      "¿Alguna vez te has preguntado cómo se crean los mundos imposibles del cine?";
-  final paragraph =
-      "Aprende cómo el cine convierte la ficción en realidad con efectos visuales.";
+  final question = "Explora cómo se crean los mundos imposibles del cine...";
 
   @override
   Widget build(BuildContext context) {
@@ -23,25 +20,22 @@ class HomePage extends StatelessWidget {
             Consts.appName,
             style: TextStyle(
               color: Consts.appColor,
-              fontSize: 64,
+              fontSize: 60,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 12),
           Paragraph(
             text: question,
             alpha: ParagraphAlpha.full,
             overrideStyle: const TextStyle(
               color: Color.fromARGB(255, 200, 185, 253),
-              fontSize: 28,
+              fontSize: 40,
               height: 1.4,
               fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(height: 40),
-          Paragraph(
-            text: paragraph,
-          ),
           const Expanded(child: SizedBox()),
           Center(
             child: _StartButton(
